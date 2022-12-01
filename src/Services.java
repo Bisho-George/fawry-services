@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 abstract public class Services {
 
-    ArrayList<ServiceProvider> serviceprov;
+    ArrayList<ServicesProvider> servicesprov;
 
    public abstract void operation();
 
