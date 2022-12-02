@@ -1,11 +1,12 @@
 public class Wallet {
     private double amount;
-//constructor
-  public Wallet(double am){
-      this.amount = am;
-  }
 
-  //getter
+    //constructor
+    public Wallet(double am) {
+        this.amount = am;
+    }
+
+    //getter
     public double getAmount() {
         return amount;
     }
@@ -15,11 +16,12 @@ public class Wallet {
     }
 
     //Consume the money you want to send from your wallet
-    public void consume(){
+    public void consume() {
 
     }
+
     //add the refunded money back to your wallet
-    public void put(){
+    public void put() {
 
     }
 }

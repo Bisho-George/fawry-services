@@ -1,7 +1,6 @@
-public class CreditCard implements IPayment{
-
+public class CreditCard extends IPayment{
     @Override
-    public double pay() {
-        return 0;
+    public double cost() {
+        return super.cost();
     }
 }

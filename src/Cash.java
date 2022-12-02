@@ -1,9 +1,6 @@
-public class Cash implements IPayment{
-
+public class Cash extends IPayment{
     @Override
-    public double pay() {
-        return 0;
+    public double cost() {
+        return super.cost();
     }
-
-
 }

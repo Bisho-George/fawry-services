@@ -10,15 +10,13 @@ public class Admin extends  Person {
     }
 
 
-
-
-    //response with accept or reject on refund requests
+    // response with accept or reject on refund requests
     public void response(){
 
     }
 
 
-    //add new refund to transaction refund list
+    // add new refund to transaction refund list
     public void added(){}
 
 

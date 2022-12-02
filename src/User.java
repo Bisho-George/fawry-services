@@ -1,7 +1,7 @@
 public class User extends Person {
-
     private Wallet obj;
 
+    private int paymentCount = 0;
     public User(String pass, String user) {
         super(pass, user);
     }
@@ -10,15 +10,15 @@ public class User extends Person {
         this.obj = obj;
     }
 
-
-
     public Wallet getObj() {
         return obj;
     }
 
-    public void starttrans(){
-
+    public int getPaymentCount() {
+        return paymentCount;
     }
 
-
+    public void starttrans() {
+        paymentCount++;
+    }
 }
