@@ -7,28 +7,13 @@
     <list default="true" id="d0ad8278-ca4e-4669-9d92-30e490c35fcc" name="Changes" comment="Updating Services Providers Classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CancerHospitals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CancerHospitals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Discount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Etisalat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Etisalat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LandlineServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LandlineServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MobileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MobileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MonthlyReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MonthlyReceipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NGOs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NGOs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Orange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Orange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Context.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Handler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OverallDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OverallDiscount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuarterReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuarterReceipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Schools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RefundTransactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RefundTransactions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SpecificDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecificDiscount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vodafone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vodafone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wallet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/We.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/We.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

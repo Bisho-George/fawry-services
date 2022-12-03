@@ -10,7 +10,6 @@ public class RefundTransactions {
         this.state = st;
     }
 
-    //
     public void startRefund() {
 
     }

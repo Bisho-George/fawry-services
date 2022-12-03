@@ -5,9 +5,9 @@ public class Context {
 
     private HashMap<String, String> persons;
 
-   public Context(){
+    public Context() {
         persons = new HashMap<String, String>();
-   }
+    }
 
 
 }

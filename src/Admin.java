@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Admin extends  Person {
+public class Admin extends Person {
 
     private ArrayList<RefundTransactions> ref;
 
@@ -11,18 +11,15 @@ public class Admin extends  Person {
 
 
     // response with accept or reject on refund requests
-    public void response(){
+    public void response() {
 
     }
 
 
     // add new refund to transaction refund list
-    public void added(){}
+    public void added() {
 
-
-
-
-
+    }
 
 
 }
