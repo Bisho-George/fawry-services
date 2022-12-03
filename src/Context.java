@@ -9,5 +9,7 @@ public class Context {
         persons = new HashMap<String, String>();
     }
 
-
+    public HashMap<String, String> getPersons() {
+        return persons;
+    }
 }
