@@ -5,9 +5,11 @@ public class Context {
 
     private HashMap<String, String> persons;
 
-   public Context(){
+    public Context() {
         persons = new HashMap<String, String>();
-   }
+    }
 
-
+    public HashMap<String, String> getPersons() {
+        return persons;
+    }
 }
