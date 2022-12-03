@@ -17,6 +17,7 @@ public class Main {
 
 
             if(choice==1){
+
                 System.out.println("Enter username ");
                 String userName=myObj.nextLine();
                 System.out.println("Enter password ");
@@ -44,61 +45,202 @@ public class Main {
             System.out.println("4 Landline services");
             int servChoice=myObj.nextInt();
 
-//            if(servChoice==1||servChoice==2){
-//                System.out.println("1.We");
-//                System.out.println("2.Vodafone");
-//                System.out.println("3.Orange");
-//                System.out.println("4.Etisalat");
-//                int servProvChoice=myObj.nextInt();
-//
-//                if(servProvChoice==1){
-//                    ServicesProvider we =new We();
-//                    we.providerOperation();
-//                    System.out.println("Enter mobile number: ");
-//                    String mobileNumber=myObj.nextLine();
-//                    System.out.println("Enter amount: ");
-//                    double amount=myObj.nextDouble();
-//                    Form weForm=new Form(mobileNumber,amount);
-//
-//                }
-//                else if(servProvChoice==2){
-//                    ServicesProvider Vodafone =new Vodafone();
-//                    Vodafone.providerOperation();
-//                    System.out.println("Enter mobile number: ");
-//                    String mobileNumber=myObj.nextLine();
-//                    System.out.println("Enter amount: ");
-//                    double amount=myObj.nextDouble();
-//                    Form vodafoneForm=new Form(mobileNumber,amount);
-//                }
-//                else if(servProvChoice==3){
-//                    ServicesProvider Orange =new Orange();
-//                    Orange.providerOperation();
-//                    System.out.println("Enter mobile number: ");
-//                    String mobileNumber=myObj.nextLine();
-//                    System.out.println("Enter amount: ");
-//                    double amount=myObj.nextDouble();
-//                    Form orangeForm=new Form(mobileNumber,amount);
-//                }
-//                if(servProvChoice==4){
-//                    ServicesProvider Etisalat =new Etisalat();
-//                    Etisalat.providerOperation();
-//                    System.out.println("Enter mobile number: ");
-//                    String mobileNumber=myObj.nextLine();
-//                    System.out.println("Enter amount: ");
-//                    double amount=myObj.nextDouble();
-//                    Form etisalatForm=new Form(mobileNumber,amount);
-//                }
-//
-//
-//            }
-//            else if (servChoice==3) {
-//                System.out.println("1.Cancer hospital");
-//                System.out.println("2.Schools");
-//                System.out.println("3.NGOs");
-//
-//
-//
-//            }
+            if(servChoice==1){
+                InternetFactory intFact = new InternetFactory();
+                intFact.type().operation();
+
+
+                System.out.println("1.We");
+                System.out.println("2.Vodafone");
+                System.out.println("3.Orange");
+                System.out.println("4.Etisalat");
+                int servProvChoice=myObj.nextInt();
+
+                if(servProvChoice==1){
+                    ServicesProvider we =new We();
+                    we.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form weForm=new Form(mobileNumber,amount);
+
+                }
+                else if(servProvChoice==2){
+                    ServicesProvider Vodafone =new Vodafone();
+                    Vodafone.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form vodafoneForm=new Form(mobileNumber,amount);
+                }
+                else if(servProvChoice==3){
+                    ServicesProvider Orange =new Orange();
+                    Orange.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form orangeForm=new Form(mobileNumber,amount);
+                }
+                if(servProvChoice==4){
+                    ServicesProvider Etisalat =new Etisalat();
+                    Etisalat.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form etisalatForm=new Form(mobileNumber,amount);
+                }
+
+
+            } else if (servChoice==2) {
+
+                MobileFactory mobFact = new MobileFactory();
+                mobFact.type().operation();
+
+
+                System.out.println("1.We");
+                System.out.println("2.Vodafone");
+                System.out.println("3.Orange");
+                System.out.println("4.Etisalat");
+                int servProvChoice=myObj.nextInt();
+
+                if(servProvChoice==1){
+                    ServicesProvider we =new We();
+                    we.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form weForm=new Form(mobileNumber,amount);
+
+                }
+                else if(servProvChoice==2){
+                    ServicesProvider Vodafone =new Vodafone();
+                    Vodafone.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form vodafoneForm=new Form(mobileNumber,amount);
+                }
+                else if(servProvChoice==3){
+                    ServicesProvider Orange =new Orange();
+                    Orange.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form orangeForm=new Form(mobileNumber,amount);
+                }
+                if(servProvChoice==4){
+                    ServicesProvider Etisalat =new Etisalat();
+                    Etisalat.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form etisalatForm=new Form(mobileNumber,amount);
+                }
+
+
+            }
+            else if (servChoice==3) {
+                DonationFactory donFact = new DonationFactory();
+                donFact.type().operation();
+
+                System.out.println("1.Cancer hospital");
+                System.out.println("2.Schools");
+                System.out.println("3.NGOs");
+                int servProvChoice=myObj.nextInt();
+
+                if(servProvChoice==1){
+                    ServicesProvider cancer =new CancerHospitals();
+                    cancer.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form cancerForm=new Form(mobileNumber,amount);
+
+                }
+
+                else if(servProvChoice==2){
+
+                    ServicesProvider schools = new Schools();
+                    schools.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form schoolsForm=new Form(mobileNumber,amount);
+
+
+
+
+
+                }
+
+                else if(servProvChoice==3){
+
+                    ServicesProvider ngo = new NGOs();
+                    ngo.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form ngoForm=new Form(mobileNumber,amount);
+
+
+
+
+
+                }
+
+
+
+
+
+            } else if (servChoice==4) {
+                LandlineFactory landFact = new LandlineFactory();
+                landFact.type().operation();
+
+                System.out.println("Quarter Receipt");
+                System.out.println("Monthly Receipt");
+
+                int servProvChoice=myObj.nextInt();
+
+                if(servProvChoice==1){
+                    ServicesProvider q =new QuarterReceipt();
+                    q.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form quarterForm=new Form(mobileNumber,amount);
+
+                } else if (servProvChoice==2) {
+
+                    ServicesProvider m =new MonthlyReceipt();
+                    m.providerOperation();
+                    System.out.println("Enter mobile number: ");
+                    String mobileNumber=myObj.nextLine();
+                    System.out.println("Enter amount: ");
+                    double amount=myObj.nextDouble();
+                    Form monthlyForm=new Form(mobileNumber,amount);
+
+
+
+                }
+
+
+            }
+
+
+        }
+        else{
 
 
         }

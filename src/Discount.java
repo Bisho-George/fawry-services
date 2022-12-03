@@ -6,4 +6,5 @@ public abstract class Discount extends IPayment {
     public double cost(){
         return payment.cost();
     }
+
 }
