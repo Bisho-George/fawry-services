@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("choose between user and admin");
@@ -9,27 +10,26 @@ public class Main {
         Scanner myObj = new Scanner(System.in);
         int choose = myObj.nextInt();
 
-        if(choose==1){
+        if (choose == 1) {
 
             System.out.println("1.Sign in");
             System.out.println("2.Sign up");
-            int choice=myObj.nextInt();
+            int choice = myObj.nextInt();
 
 
-            if(choice==1){
+            if (choice == 1) {
                 System.out.println("Enter username ");
-                String userName=myObj.nextLine();
+                String userName = myObj.nextLine();
                 System.out.println("Enter password ");
-                String password=myObj.nextLine();
-                Person user=new User(password,userName);
+                String password = myObj.nextLine();
+                Person user = new User(password, userName);
                 user.signin();
-            }
-            else if(choice==2){
+            } else if (choice == 2) {
                 System.out.println("Enter username ");
-                String userName=myObj.nextLine();
+                String userName = myObj.nextLine();
                 System.out.println("Enter password ");
-                String password=myObj.nextLine();
-                Person user=new User(password,userName);
+                String password = myObj.nextLine();
+                Person user = new User(password, userName);
                 user.signup();
                 user.signin();
 
@@ -42,7 +42,7 @@ public class Main {
             System.out.println("2 Mobile services");
             System.out.println("3 Donation services");
             System.out.println("4 Landline services");
-            int servChoice=myObj.nextInt();
+            int servChoice = myObj.nextInt();
 
 //            if(servChoice==1||servChoice==2){
 //                System.out.println("1.We");
