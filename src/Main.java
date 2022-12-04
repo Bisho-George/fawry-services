@@ -36,6 +36,9 @@ public class Main {
                     user.setObj(w);
                     user.setPaymentCount(0);
                 }
+                else {
+                    System.out.println("");
+                }
 
                 System.out.println("press 1 to view wallet charge");
                 int wow = myObj.nextInt();
@@ -245,7 +248,6 @@ public class Main {
                         hand.check();
 
                     } else if (servProvChoice == 2) {
-
                         ServicesProvider schools = new Schools();
                         schools.providerOperation();
                         System.out.println("Enter mobile number: ");
@@ -398,7 +400,7 @@ public class Main {
             }
 
             // ------------- ADMIN ------------------
-            else {
+            else if (choose == 2) {
                 Scanner obj = new Scanner(System.in);
                 System.out.println("0.View Refund Transactions");
                 System.out.println("1.Sign out from the program");

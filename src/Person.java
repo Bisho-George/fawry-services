@@ -36,7 +36,7 @@ public class Person {
         return cl;
     }
 
-    // htrg3 mn type user
+    // return user
     public User signin() {
         // Search For The Key In Hashmap Of Persons
         Scanner myObj = new Scanner(System.in);
@@ -47,7 +47,6 @@ public class Person {
         this.username = userName;
         this.password = pass;
         ArrayList<User> us = cl.getCont().getU();
-        System.out.println(us.get(0).getUsername());
         for (int i = 0; i < us.size(); i++) {
             if (Objects.equals(us.get(i).getPassword(), pass) && Objects.equals(us.get(i).getUsername(), userName)) {
                 System.out.println("Signed In Successfully");
@@ -56,7 +55,33 @@ public class Person {
         }
         // If Not Found
         System.out.println("Invalid Username Or Password");
-        signin();
+        System.out.println("1- sign in");
+        System.out.println("2- sign up");
+        int choice ;
+        choice = myObj.nextInt();
+        if (choice == 1) {
+            signin();
+        }
+        else if (choice == 2) {
+            signup();
+        }
+        else {
+            System.out.println("wrong choice");
+            while (choice != 1 || choice != 2) {
+                System.out.println("please enter correct choice");
+                System.out.println("1- sign in");
+                System.out.println("2- sign up");
+                choice = myObj.nextInt();
+                if (choice == 1) {
+                    signin();
+                }
+                else if (choice == 2) {
+                    signup();
+                    signin();
+                    break;
+                }
+            }
+        }
         return new User();
     }
 
