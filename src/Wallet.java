@@ -1,13 +1,19 @@
 public class Wallet {
     private double amount;
 
-    private Form form;
+
+
 
     // constructor
-    public Wallet(double am, Form form) {
+    public Wallet(double am) {
         this.amount = am;
-        this.form = form;
+
     }
+
+
+
+
+
 
     // getter
     public double getWalletamount() {
@@ -19,9 +25,10 @@ public class Wallet {
     }
 
     // Consume the money you want to send from your wallet
-    public void consume() {
+    public void consume(double am) {
         // consume amount of money from the wallet.
-        double consume = getWalletamount() - form.getAmount();
+
+    amount -= am;
     }
 
     // add the refunded money back to your wallet.

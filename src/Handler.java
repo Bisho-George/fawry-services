@@ -10,10 +10,16 @@ public class Handler {
 
     public void check() {
         // Mobile number size must be equal 11.
-        if (form.getMobilenumber().length() != 11)
+        if (form.getMobilenumber().length() != 11) {
             System.out.println("Request Failed, Mobile Number not correct.");
+        System.exit(0);}
         // amount of money in the wallet must be more than amount of money in the form.
-        if (form.getAmount() > form.getUser().getObj().getWalletamount())
+        else if (form.getAmount() > form.getUser().getObj().getWalletamount()){
             System.out.println("Request Failed, Not Enough Money in your wallet.");
+            System.exit(0);}
+        else
+        {
+            System.out.println("Request Transaction succeesfully Happened");
+        }
     }
 }

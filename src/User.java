@@ -6,6 +6,10 @@ public class User extends Person {
         super(pass, user);
     }
 
+    public User(){
+        super();
+    }
+
     public void setObj(Wallet obj) {
         this.obj = obj;
     }

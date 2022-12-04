@@ -7,11 +7,22 @@
     <list default="true" id="d0ad8278-ca4e-4669-9d92-30e490c35fcc" name="Changes" comment="Updating Services Providers Classes">
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fawry/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fawry/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fawry/Context.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fawry/Context.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fawry/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fawry/Handler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fawry/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fawry/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fawry/OverallDiscount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fawry/OverallDiscount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fawry/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fawry/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fawry/RefundTransactions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fawry/RefundTransactions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fawry/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fawry/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fawry/Wallet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fawry/Wallet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Context.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OverallDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OverallDiscount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RefundTransactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RefundTransactions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wallet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
