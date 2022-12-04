@@ -18,6 +18,10 @@ public class User extends Person {
         return obj;
     }
 
+    public void setPaymentCount(int paymentCount) {
+        this.paymentCount = paymentCount;
+    }
+
     public int getPaymentCount() {
         return paymentCount;
     }

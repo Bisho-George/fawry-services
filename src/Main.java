@@ -1,7 +1,8 @@
 import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        int xx =1;
+        int xx = 1;
         Admin admin = new Admin();
         Context cont = new Context();
         client cl = new client(cont);
@@ -9,17 +10,16 @@ public class Main {
         Wallet w = new Wallet(10000.500);
         String mobileNumber = "111111111111";
         double amount = 0;
-        while(xx==1) {
-
+        while (xx == 1) {
 
             System.out.println("choose between user and admin");
             System.out.println("1.user");
             System.out.println("2.admin");
 
-           // Context cont = new Context();
-           // client cl = new client(cont);
+            // Context cont = new Context();
+            // client cl = new client(cont);
 
-           // Admin admin = new Admin();
+            // Admin admin = new Admin();
 
             Scanner myObj = new Scanner(System.in);
             int choose = myObj.nextInt();
@@ -30,31 +30,33 @@ public class Main {
                 System.out.println("2.Sign up");
                 int choice = myObj.nextInt();
                 Person per = new Person();
-               // User user = null;
+                // User user = null;
                 // user.setContext(cont);
                 //Wallet w = new Wallet(10000.500);
-               // String mobileNumber = "111111111111";
-               // double amount = 0;
+                // String mobileNumber = "111111111111";
+                // double amount = 0;
                 per.setClient(cl);
 
                 if (choice == 1) {
 
                     user = per.signin();
                     //= cont.getU();
-                } else if (choice == 2) {
+                }
+                else if (choice == 2) {
                     // user = new User();
 
                     per.signup();
                     user = per.signin();
                     user.setObj(w);
-
+                    // user.setPaymentCount(0);
                 }
                 //  user.setContext(cont);
 
                 System.out.println("press 1 to view wallet charge");
                 int wow = myObj.nextInt();
-                if(wow==1){
-                System.out.println("Your Wallet Charge = " + w.getWalletamount());}
+                if (wow == 1) {
+                    System.out.println("Your Wallet Charge = " + w.getWalletamount());
+                }
 
 
                 System.out.println("------ Start transaction ----- ");
@@ -66,7 +68,6 @@ public class Main {
                 int servChoice = myObj.nextInt();
                 assert user != null;
                 user.starttrans();
-
 
 
                 if (servChoice == 1) {
@@ -92,7 +93,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form weForm = new Form(mobileNumber, amount);
                         weForm.setUser(user);
                         Handler hand = new Handler();
@@ -111,7 +112,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form vodafoneForm = new Form(mobileNumber, amount);
                         vodafoneForm.setUser(user);
                         Handler hand = new Handler();
@@ -128,7 +129,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form orangeForm = new Form(mobileNumber, amount);
                         orangeForm.setUser(user);
                         Handler hand = new Handler();
@@ -146,7 +147,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form etisalatForm = new Form(mobileNumber, amount);
                         etisalatForm.setUser(user);
                         Handler hand = new Handler();
@@ -178,7 +179,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form weForm = new Form(mobileNumber, amount);
                         weForm.setUser(user);
                         Handler hand = new Handler();
@@ -196,7 +197,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form vodafoneForm = new Form(mobileNumber, amount);
                         vodafoneForm.setUser(user);
                         Handler hand = new Handler();
@@ -213,7 +214,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form orangeForm = new Form(mobileNumber, amount);
                         orangeForm.setUser(user);
                         Handler hand = new Handler();
@@ -231,7 +232,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form etisalatForm = new Form(mobileNumber, amount);
                         etisalatForm.setUser(user);
                         Handler hand = new Handler();
@@ -260,7 +261,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form cancerForm = new Form(mobileNumber, amount);
                         cancerForm.setUser(user);
                         Handler hand = new Handler();
@@ -279,7 +280,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form schoolsForm = new Form(mobileNumber, amount);
                         schoolsForm.setUser(user);
                         Handler hand = new Handler();
@@ -299,7 +300,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form ngoForm = new Form(mobileNumber, amount);
                         ngoForm.setUser(user);
                         Handler hand = new Handler();
@@ -330,7 +331,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form quarterForm = new Form(mobileNumber, amount);
                         quarterForm.setUser(user);
                         Handler hand = new Handler();
@@ -349,7 +350,7 @@ public class Main {
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
-                        amount = myObj.nextInt();
+                        amount = myObj.nextDouble();
                         Form monthlyForm = new Form(mobileNumber, amount);
                         monthlyForm.setUser(user);
                         Handler hand = new Handler();
@@ -361,53 +362,55 @@ public class Main {
 
 
                 }
-                //---------------------------------
-              /*  System.out.println("1.Pay with Credit Card");
+
+                //-----------------------------------------------------------------------
+                System.out.println("1.Pay with Credit Card");
                 System.out.println("2.Pay Cash");
                 int pay = myObj.nextInt();
 
                 if (pay == 1) {
                     Scanner myObjj = new Scanner(System.in);  // Create a Scanner object
                     System.out.println("Please Enter Your Card Number");
-
                     String userName = myObjj.nextLine();
+
                     IPayment credit = new CreditCard();
                     credit.setCost(amount);
-                    Discount disc = new OverallDiscount(credit);
-                    amount = disc.cost();
+                    credit = new OverallDiscount(credit);
+                    // amount = credit.cost();
 
                     if (servChoice == 2) {
-                        Discount disc2 = new SpecificDiscount(disc);
-                        amount = disc2.cost();
+                        credit = new SpecificDiscount(credit);
+                        // amount = credit.cost();
                     }
-
-                    System.out.println("Total amount to be payed by Creditcard = " + amount);
+                    amount = credit.cost();
+                    System.out.println("Total amount to be paid by Creditcard = " + amount);
+                    // Remove Money From the wallet
                     user.getObj().consume(amount);
+                }
 
-
-                } else {
+                // ---------------------------------- Cash ---------------------------------
+                else {
 
                     IPayment cash = new Cash();
                     cash.setCost(amount);
-                    Discount disc = new OverallDiscount(cash);
-                    amount = disc.cost();
+                    cash = new OverallDiscount(cash);
+                    // amount = cash.cost();
 
                     if (servChoice == 2) {
-                        Discount disc2 = new SpecificDiscount(disc);
-                        amount = disc2.cost();
+                        cash = new SpecificDiscount(cash);
+                        // amount = cash.cost();
                     }
+                    amount = cash.cost();
+                    System.out.println("Total amount to be paid by cash = " + amount);
+                    // Remove Money From the wallet
+                    user.getObj().consume(amount);
+                }
 
-                    System.out.println("Total amount to be payed by cash = " + amount);
-
-
-                }*/
-
-                //---------------------------------------------
-
+                //-----------------------------------------------------------------
 
                 RefundTransactions rT = new RefundTransactions(mobileNumber, amount, false);
                 rT.setUser(user);
-                w.consume(amount);
+                // w.consume(amount);   Kosom el 8lta kant hna
                 System.out.println("Total amount to be payed = " + amount);
                 System.out.println("0.Refund your Money Transaction");
                 System.out.println("1.Sign out from the program");
@@ -415,61 +418,44 @@ public class Main {
                 if (xx == 1) {
                     user.signout();
                     continue;
-                    // System.exit(0);
-                    // admin.adminMenu();
-
                 } else {
-                    //gooooooooo
-
-                  //  RefundTransactions rT = new RefundTransactions(mobileNumber, amount, false);
                     admin.startRefund(rT);
-                  //  rT.startRefund(admin);
-
                 }
 
                 System.out.println("0.Exit The Program");
                 System.out.println("1.Sign out from the program");
                 xx = myObj.nextInt();
-                if(xx==1){
+                if (xx == 1) {
                     user.signout();
                     continue;
-                }
-                else{
+                } else {
                     System.exit(0);
                 }
+            }
 
-
-            } else {
+            // ------------- ADMIN ------------------
+            else {
                 Scanner obj = new Scanner(System.in);
                 System.out.println("0.View Refund Transactions");
                 System.out.println("1.Sign out from the program");
                 xx = obj.nextInt();
-                if(xx==0){
+                if (xx == 0) {
                     admin.response();
-                   // admin.print();
-                }
-                else{
+                } else {
                     admin.signout();
                     continue;
-                    // System.exit(0);
                 }
-
-
-               // admin.adminMenu();
             }
 
             System.out.println("0.Exit The Program");
             System.out.println("1.Sign out from the program");
             xx = myObj.nextInt();
-            if(xx==1){
+            if (xx == 1) {
                 admin.signout();
                 continue;
-            }
-            else{
+            } else {
                 System.exit(0);
             }
-
         }
-
     }
 }

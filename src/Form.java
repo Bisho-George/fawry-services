@@ -7,9 +7,13 @@ public class Form {
 
     private User user;
 
-    public Form(String mn,double am){
-        this.mobilenumber=mn;
-        this.amount=am;
+    public Form(String mn, double am) {
+        this.mobilenumber = mn;
+        this.amount = am;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 
     public void setUser(User user) {

@@ -4,7 +4,7 @@ public class SpecificDiscount extends Discount {
     }
     @Override
     public double cost() {
-        double totalcost = super.cost();
+        double totalcost = payment.cost();
         totalcost -= (totalcost * 0.2);
         return totalcost;
     }
