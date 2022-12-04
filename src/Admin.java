@@ -10,7 +10,6 @@ public class Admin extends Person {
         ref = new ArrayList<RefundTransactions>();
     }
 
-
     // response with accept or reject on refund requests
     public void response() {
         System.out.println("This is the list of the Refund requests: ");
@@ -24,25 +23,16 @@ public class Admin extends Person {
             if (choose == 1) {
                 ref.get(i).setState(true);
                 ref.get(i).getUser().getObj().put(ref.get(i));
-            }
-            else {
+            } else {
                 ref.get(i).setState(false);
             }
         }
         ref.clear();
     }
 
-    // public void print(){
-    // System.out.println(ref.get(0).getAmount());}
-
-
     // add new refund to transaction refund list
     public void startRefund(RefundTransactions obj) {
         ref.add(obj);
-        //  System.out.println("mob "+obj.getMobileNumber());
-        // System.out.println("money "+obj.getAmount());
-        //   System.out.println("mob "+ref.get(0).getMobileNumber());
-        //   System.out.println("money"+ref.get(0).getAmount());
         System.out.println("Refund request sent successfully to the admin");
     }
 
@@ -54,9 +44,9 @@ public class Admin extends Person {
         int ref = myObj.nextInt();
         if (ref == 1) {
             this.response();
-        } else {
+        }
+        else {
             this.signout();
-            // System.exit(0);
         }
     }
 

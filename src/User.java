@@ -2,11 +2,12 @@ public class User extends Person {
     private Wallet obj;
 
     private int paymentCount = 0;
+
     public User(String pass, String user) {
         super(pass, user);
     }
 
-    public User(){
+    public User() {
         super();
     }
 

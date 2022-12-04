@@ -10,16 +10,11 @@ public class Main {
         Wallet w = new Wallet(10000.500);
         String mobileNumber = "111111111111";
         double amount = 0;
-        while (xx == 1) {
 
+        while (xx == 1) {
             System.out.println("choose between user and admin");
             System.out.println("1.user");
             System.out.println("2.admin");
-
-            // Context cont = new Context();
-            // client cl = new client(cont);
-
-            // Admin admin = new Admin();
 
             Scanner myObj = new Scanner(System.in);
             int choose = myObj.nextInt();
@@ -30,34 +25,23 @@ public class Main {
                 System.out.println("2.Sign up");
                 int choice = myObj.nextInt();
                 Person per = new Person();
-                // User user = null;
-                // user.setContext(cont);
-                //Wallet w = new Wallet(10000.500);
-                // String mobileNumber = "111111111111";
-                // double amount = 0;
                 per.setClient(cl);
 
                 if (choice == 1) {
-
                     user = per.signin();
-                    //= cont.getU();
                 }
                 else if (choice == 2) {
-                    // user = new User();
-
                     per.signup();
                     user = per.signin();
                     user.setObj(w);
-                    // user.setPaymentCount(0);
+                    user.setPaymentCount(0);
                 }
-                //  user.setContext(cont);
 
                 System.out.println("press 1 to view wallet charge");
                 int wow = myObj.nextInt();
                 if (wow == 1) {
                     System.out.println("Your Wallet Charge = " + w.getWalletamount());
                 }
-
 
                 System.out.println("------ Start transaction ----- ");
                 System.out.println("Choose from the following Services Menu");
@@ -69,11 +53,9 @@ public class Main {
                 assert user != null;
                 user.starttrans();
 
-
                 if (servChoice == 1) {
                     InternetFactory intFact = new InternetFactory();
                     intFact.type().operation();
-
 
                     System.out.println("Choose one from These Service Providers");
                     System.out.println("1.We");
@@ -161,7 +143,6 @@ public class Main {
                     MobileFactory mobFact = new MobileFactory();
                     mobFact.type().operation();
 
-
                     System.out.println("1.We");
                     System.out.println("2.Vodafone");
                     System.out.println("3.Orange");
@@ -172,9 +153,7 @@ public class Main {
                         ServicesProvider we = new We();
                         we.providerOperation();
                         System.out.println("Enter mobile number: ");
-                        //  System.out.println("wheree ?");
                         Scanner myOb = new Scanner(System.in);  // Create a Scanner object
-                        // System.out.println("Enter username");
 
                         mobileNumber = myOb.nextLine();
 
@@ -193,7 +172,6 @@ public class Main {
 
                         Scanner myOb = new Scanner(System.in);  // Create a Scanner object
 
-
                         mobileNumber = myOb.nextLine();
 
                         System.out.println("Enter amount: ");
@@ -207,9 +185,7 @@ public class Main {
                         ServicesProvider Orange = new Orange();
                         Orange.providerOperation();
                         System.out.println("Enter mobile number: ");
-                        //  System.out.println("wheree ?");
                         Scanner myOb = new Scanner(System.in);  // Create a Scanner object
-                        // System.out.println("Enter username");
 
                         mobileNumber = myOb.nextLine();
 
@@ -306,11 +282,7 @@ public class Main {
                         Handler hand = new Handler();
                         hand.setForm(ngoForm);
                         hand.check();
-
-
                     }
-
-
                 } else if (servChoice == 4) {
                     LandlineFactory landFact = new LandlineFactory();
                     landFact.type().operation();
@@ -356,11 +328,7 @@ public class Main {
                         Handler hand = new Handler();
                         hand.setForm(monthlyForm);
                         hand.check();
-
-
                     }
-
-
                 }
 
                 //-----------------------------------------------------------------------
@@ -375,12 +343,11 @@ public class Main {
 
                     IPayment credit = new CreditCard();
                     credit.setCost(amount);
-                    credit = new OverallDiscount(credit);
-                    // amount = credit.cost();
-
+                    if (user.getPaymentCount() <= 1) {
+                        credit = new OverallDiscount(credit);
+                    }
                     if (servChoice == 2) {
                         credit = new SpecificDiscount(credit);
-                        // amount = credit.cost();
                     }
                     amount = credit.cost();
                     System.out.println("Total amount to be paid by Creditcard = " + amount);
@@ -390,15 +357,13 @@ public class Main {
 
                 // ---------------------------------- Cash ---------------------------------
                 else {
-
                     IPayment cash = new Cash();
                     cash.setCost(amount);
-                    cash = new OverallDiscount(cash);
-                    // amount = cash.cost();
-
+                    if (user.getPaymentCount() <= 1) {
+                        cash = new OverallDiscount(cash);
+                    }
                     if (servChoice == 2) {
                         cash = new SpecificDiscount(cash);
-                        // amount = cash.cost();
                     }
                     amount = cash.cost();
                     System.out.println("Total amount to be paid by cash = " + amount);
@@ -410,7 +375,6 @@ public class Main {
 
                 RefundTransactions rT = new RefundTransactions(mobileNumber, amount, false);
                 rT.setUser(user);
-                // w.consume(amount);   Kosom el 8lta kant hna
                 System.out.println("Total amount to be payed = " + amount);
                 System.out.println("0.Refund your Money Transaction");
                 System.out.println("1.Sign out from the program");

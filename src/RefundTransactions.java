@@ -35,8 +35,4 @@ public class RefundTransactions {
     public Boolean getState() {
         return state;
     }
-
-    //
-   // public void startRefund(Admin obj) {
-       // obj.added(this);}
 }
