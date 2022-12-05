@@ -40,10 +40,19 @@ public class Main {
                     System.out.println("");
                 }
 
+                System.out.println("Press 0 to add to the wallet");
                 System.out.println("press 1 to view wallet charge");
                 int wow = myObj.nextInt();
                 if (wow == 1) {
                     System.out.println("Your Wallet Charge = " + w.getWalletamount());
+                }
+                else {
+                    System.out.println("enter amount of money you want to add to your wallet");
+                    Scanner sss = new Scanner(System.in);
+                    double mm = sss.nextDouble();
+
+                    user.getObj().addUser(mm);
+                    System.out.println("Your Wallet Charge after addition = " + w.getWalletamount());
                 }
 
                 System.out.println("------ Start transaction ----- ");

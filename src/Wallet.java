@@ -32,5 +32,8 @@ public class Wallet {
             System.out.println("Money refund rejected by the admin.");
         }
     }
+    public void addUser(double m) {
+        amount += m;
+    }
 }
 
