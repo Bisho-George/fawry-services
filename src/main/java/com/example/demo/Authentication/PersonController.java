@@ -1,5 +1,6 @@
 package com.example.demo.Authentication;
 
+import com.example.demo.UserOperations.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 

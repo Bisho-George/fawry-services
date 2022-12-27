@@ -1,12 +1,17 @@
-package com.example.demo.Authentication;
+package com.example.demo.UserOperations;
 
 
+import com.example.demo.AdminOperations.AddWalletTransactions;
+import com.example.demo.AdminOperations.PaymentTransactions;
+import com.example.demo.AdminOperations.RefundTransactions;
+import com.example.demo.Authentication.Person;
 import com.example.demo.Payment.Wallet;
 import com.example.demo.Payment.WalletController;
 
 public class User extends Person {
     private Wallet obj;
     private WalletController walletc;
+
 
     private int paymentCount = 0;
 
@@ -17,6 +22,8 @@ public class User extends Person {
     public User() {
         super();
     }
+
+
 
     public void setObj(Wallet obj) {
         this.obj = obj;
@@ -46,7 +53,6 @@ public class User extends Person {
         paymentCount++;
     }
 
-    public void payment(double value){
-        walletc.consume(value);
-    }
+
+
 }

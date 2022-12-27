@@ -1,5 +1,6 @@
 package com.example.demo.Authentication;
 
+import com.example.demo.UserOperations.User;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
