@@ -10,14 +10,17 @@ public class WE extends Service{
     }
 
     @Override
-    public void handle(Map<String, ?> body) {
+    public String handle(Map<String, ?> body) {
         // Assert that mobile number exists
-        if (body.get("mobile number")==null) {
+        if (body.get("mobile number") == null) {
             // Invalid input for WE
+            return "Invalid input for WE";
         }
-        if (body.get("zip")==null) {
+        if (body.get("zip") == null) {
             // Invalid input for WE
+            return "Invalid input for WE";
         }
+        return "charged successfully";
         // API call
     }
 }

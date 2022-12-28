@@ -11,7 +11,7 @@ public abstract class Service {
         this.name = name;
     }
 
-    public abstract void handle(Map<String, ?> body);
+    public abstract String handle(Map<String, ?> body);
 
     public String getName() {
         return name;
