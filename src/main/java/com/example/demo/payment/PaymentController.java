@@ -1,7 +1,7 @@
-package com.example.phase.payment;
+package com.example.demo.payment;
 
-import com.example.phase.serviceprovider.Service;
-import com.example.phase.serviceprovider.WE;
+import com.example.demo.serviceprovider.Service;
+import com.example.demo.serviceprovider.WE;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

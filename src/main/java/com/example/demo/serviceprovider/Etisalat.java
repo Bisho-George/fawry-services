@@ -1,14 +1,11 @@
 package com.example.demo.serviceprovider;
 
-import com.example.demo.payment.PaymentBody;
-
 import java.util.Map;
 
-public class Vodafone extends Service {
-    public Vodafone(String name) {
+public class Etisalat extends Service{
+    public Etisalat(String name) {
         super(name);
     }
-
     @Override
     public String handle(Map<String, ?> body) {
         // Assert that mobile number exists

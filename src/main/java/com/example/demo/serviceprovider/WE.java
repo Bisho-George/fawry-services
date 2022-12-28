@@ -1,23 +1,29 @@
-package com.example.phase.serviceprovider;
+package com.example.demo.serviceprovider;
 
-import com.example.phase.payment.PaymentBody;
+import com.example.demo.payment.PaymentBody;
+import org.springframework.http.ResponseEntity;
 
 import java.util.Map;
 
-public class WE extends Service{
+
+public class WE extends Service {
     public WE(String name) {
         super(name);
     }
 
     @Override
-    public void handle(Map<String, ?> body) {
+    public String handle(Map<String, ?> body) {
         // Assert that mobile number exists
-        if (body.get("mobile number")==null) {
+        if (body.get("mobile number") == null) {
             // Invalid input for WE
+            return "Invalid input for WE";
         }
-        if (body.get("zip")==null) {
+        if (body.get("zip") == null) {
             // Invalid input for WE
+            return "Invalid input for WE";
+
         }
         // API call
+        return "charged successfully";
     }
 }

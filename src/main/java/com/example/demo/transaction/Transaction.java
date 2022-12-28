@@ -1,4 +1,4 @@
-package com.example.phase.transaction;
+package com.example.demo.transaction;
 
 public class Transaction {
     private final int id;
