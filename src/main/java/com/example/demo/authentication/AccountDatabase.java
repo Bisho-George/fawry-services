@@ -1,4 +1,4 @@
-package com.example.phase.authentication;
+package com.example.demo.authentication;
 
 import org.springframework.stereotype.Service;
 

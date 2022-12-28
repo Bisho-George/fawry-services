@@ -1,4 +1,4 @@
-package com.example.phase.payment;
+package com.example.demo.payment;
 
 public class CashPaymentMethod implements PaymentMethod{
     @Override

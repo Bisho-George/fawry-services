@@ -1,4 +1,4 @@
-package com.example.phase.transaction;
+package com.example.demo.transaction;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

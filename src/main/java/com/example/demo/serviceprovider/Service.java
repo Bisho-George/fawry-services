@@ -1,6 +1,6 @@
-package com.example.phase.serviceprovider;
+package com.example.demo.serviceprovider;
 
-import com.example.phase.payment.PaymentBody;
+import com.example.demo.payment.PaymentBody;
 
 import java.util.Map;
 
@@ -11,7 +11,7 @@ public abstract class Service {
         this.name = name;
     }
 
-    public abstract void handle(Map<String, ?> body);
+    public abstract String handle(Map<String, ?> body);
 
     public String getName() {
         return name;
