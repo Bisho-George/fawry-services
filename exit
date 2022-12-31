@@ -1,0 +1,108 @@
+[1mdiff --git a/src/main/java/com/example/phase/payment/PaymentController.java b/src/main/java/com/example/phase/payment/PaymentController.java[m
+[1mindex a1593cb..12ae297 100644[m
+[1m--- a/src/main/java/com/example/phase/payment/PaymentController.java[m
+[1m+++ b/src/main/java/com/example/phase/payment/PaymentController.java[m
+[36m@@ -1,7 +1,9 @@[m
+ package com.example.phase.payment;[m
+ [m
+[31m-import com.example.phase.serviceprovider.Service;[m
+[31m-import com.example.phase.serviceprovider.WE;[m
+[32m+[m[32mimport com.example.phase.serviceprovider.*;[m
+[32m+[m[32mimport com.example.phase.transaction.Transaction;[m
+[32m+[m[32mimport com.example.phase.transaction.TransactionDatabase;[m
+[32m+[m[32mimport com.example.phase.transaction.TransactionType;[m
+ import org.springframework.web.bind.annotation.PostMapping;[m
+ import org.springframework.web.bind.annotation.RequestBody;[m
+ import org.springframework.web.bind.annotation.RestController;[m
+[36m@@ -11,8 +13,8 @@[m [mimport java.util.Map;[m
+ [m
+ @RestController[m
+ public class PaymentController {[m
+[31m-    List<Service> services = List.of(new WE("we"));[m
+[31m-[m
+[32m+[m[32m    List<Service> services = List.of(new WE("we"), new Orange("Orange"), new Vodafone("vodafone"), new Etisalat("etisalat"));[m
+[32m+[m[32m    TransactionDatabase transactionDatabase;[m
+     @PostMapping("/pay")[m
+     public void pay(@RequestBody Map<String, ?> body) {[m
+         String paymentMethod = body.get("method").toString();[m
+[36m@@ -22,6 +24,7 @@[m [mpublic class PaymentController {[m
+         for (Service service : services) {[m
+             if (service.getName().equals(requestedService)) {[m
+                 service.handle(body);[m
+[32m+[m[32m                transactionDatabase.createTransaction(TransactionType.PAYMENT);[m
+             }[m
+         }[m
+ [m
+[1mdiff --git a/src/main/java/com/example/phase/serviceprovider/Service.java b/src/main/java/com/example/phase/serviceprovider/Service.java[m
+[1mindex e98377f..c2261e9 100644[m
+[1m--- a/src/main/java/com/example/phase/serviceprovider/Service.java[m
+[1m+++ b/src/main/java/com/example/phase/serviceprovider/Service.java[m
+[36m@@ -1,12 +1,15 @@[m
+ package com.example.phase.serviceprovider;[m
+ [m
+ import com.example.phase.payment.PaymentBody;[m
+[32m+[m[32mimport org.springframework.beans.factory.annotation.Autowired;[m
+[32m+[m[32mimport org.springframework.stereotype.Component;[m
+ [m
+ import java.util.Map;[m
+ [m
+ public abstract class Service {[m
+     private final String name;[m
+ [m
+[32m+[m
+     protected Service(String name) {[m
+         this.name = name;[m
+     }[m
+[1mdiff --git a/src/main/java/com/example/phase/serviceprovider/Vodafone.java b/src/main/java/com/example/phase/serviceprovider/Vodafone.java[m
+[1mindex 664e656..a69942c 100644[m
+[1m--- a/src/main/java/com/example/phase/serviceprovider/Vodafone.java[m
+[1m+++ b/src/main/java/com/example/phase/serviceprovider/Vodafone.java[m
+[36m@@ -1,6 +1,7 @@[m
+ package com.example.phase.serviceprovider;[m
+ [m
+ import com.example.phase.payment.PaymentBody;[m
+[32m+[m[32mimport org.springframework.stereotype.Component;[m
+ [m
+ import java.util.Map;[m
+ [m
+[1mdiff --git a/src/main/java/com/example/phase/transaction/Transaction.java b/src/main/java/com/example/phase/transaction/Transaction.java[m
+[1mindex 8f72325..267973b 100644[m
+[1m--- a/src/main/java/com/example/phase/transaction/Transaction.java[m
+[1m+++ b/src/main/java/com/example/phase/transaction/Transaction.java[m
+[36m@@ -11,5 +11,7 @@[m [mpublic class Transaction {[m
+ [m
+     public TransactionType getType() {[m
+         return type;[m
+[32m+[m[32m    }public TransactionType getId() {[m
+[32m+[m[32m        return type;[m
+     }[m
+ }[m
+[1mdiff --git a/src/main/java/com/example/phase/transaction/TransactionDatabase.java b/src/main/java/com/example/phase/transaction/TransactionDatabase.java[m
+[1mindex 264140f..efa9cce 100644[m
+[1m--- a/src/main/java/com/example/phase/transaction/TransactionDatabase.java[m
+[1m+++ b/src/main/java/com/example/phase/transaction/TransactionDatabase.java[m
+[36m@@ -1,5 +1,6 @@[m
+ package com.example.phase.transaction;[m
+ [m
+[32m+[m[32mimport org.springframework.beans.factory.annotation.Autowired;[m
+ import org.springframework.stereotype.Service;[m
+ [m
+ import java.util.ArrayList;[m
+[36m@@ -9,10 +10,17 @@[m [mimport java.util.List;[m
+ public class TransactionDatabase {[m
+     private final List<Transaction> transactions = new ArrayList<>();[m
+ [m
+[32m+[m[32m    public void createTransaction (TransactionType type) {[m
+[32m+[m[32m        int id = transactions.size();[m
+[32m+[m[32m        transactions.add(new Transaction(id, type));[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    @Autowired[m
+     public List<Transaction> getAll() {[m
+         return transactions;[m
+     }[m
+ [m
+[32m+[m[32m    @Autowired[m
+     public List<Transaction> getAllRefundTransactions() {[m
+         List<Transaction> results = new ArrayList<>();[m
+ [m
