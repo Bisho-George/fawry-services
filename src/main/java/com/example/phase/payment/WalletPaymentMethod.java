@@ -1,18 +1,15 @@
 package com.example.phase.payment;
 
-import org.springframework.stereotype.Service;
-
 
 public class WalletPaymentMethod implements PaymentMethod{
-    private Wallet w;
+    private Wallet wallet;
 
-    public WalletPaymentMethod(Wallet w){
-        this.w=w;
-
+    public WalletPaymentMethod(Wallet wallet){
+        this.wallet = wallet;
     }
     @Override
     public String pay(double amount) {
-        w.consume(amount);
+        wallet.consume(amount);
         return amount + " Has Payed With Wallet ";
     }
 

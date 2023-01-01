@@ -45,8 +45,8 @@ public class PaymentController {
         String paymentMethod = body.get("method").toString();
         double amount = Double.parseDouble(body.get("amount").toString());
         String requestedService = body.get("service").toString();
-        amount = overallDiscount.disc(amount, requestedService);
-        amount = specificDiscount.disc(amount, requestedService);
+        amount = overallDiscount.calculateDiscount(amount, requestedService);
+        amount = specificDiscount.calculateDiscount(amount, requestedService);
         for (Service service : services) {
             if (service.getName().equals(requestedService)) {
                 if (service.handle(body)) {
