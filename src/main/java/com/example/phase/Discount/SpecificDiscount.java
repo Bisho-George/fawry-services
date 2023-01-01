@@ -10,7 +10,7 @@ import java.util.Objects;
 @org.springframework.stereotype.Service
 public class SpecificDiscount extends Discount {
 
-    HashMap<String, Double> hash_map;
+    private HashMap<String, Double> hash_map;
 
     public SpecificDiscount() {
         this.hash_map = new HashMap<String, Double>();
@@ -25,13 +25,11 @@ public class SpecificDiscount extends Discount {
     }
 
     @Override
-    public double disc(double amount,String requestedservice) {
+    public double calculateDiscount(double amount, String requestedservice) {
         if(hash_map.get(requestedservice)!=null){
             double disc = hash_map.get(requestedservice);
             amount -= (amount*disc/100);
         }
-
-
 
         return amount;
 

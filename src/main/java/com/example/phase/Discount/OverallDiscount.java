@@ -7,7 +7,7 @@ public class OverallDiscount extends Discount {
     private double discount;
 
     @Override
-    public double disc(double amount,String requestedservice) {
+    public double calculateDiscount(double amount, String requestedservice) {
         amount -= (amount*discount/100);
 
         return amount;
