@@ -9,9 +9,7 @@ public class Schools extends Service {
     }
 
     public boolean handle(Map<String, ?> body) {
-        // Assert that mobile number exists
         if (body.get("amount") == null) {
-            // Invalid input for WE
             return false;
         }
 

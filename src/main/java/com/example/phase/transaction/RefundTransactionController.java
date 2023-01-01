@@ -24,10 +24,9 @@ public class RefundTransactionController {
 
     @PostMapping("/refund/{indx}")
     public void adding(@PathVariable("indx") int indx) {
-        int id = tb.getAll().size() + 1;
         double amount = tb.getAll().get(indx - 1).getAmount();
 
-        tb.addRefund(id, amount);
+        tb.addRefund(amount);
     }
 
 

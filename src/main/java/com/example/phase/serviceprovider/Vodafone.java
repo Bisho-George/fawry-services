@@ -17,7 +17,7 @@ public class Vodafone extends Service {
             return false;
         }
         if (body.get("amount") == null) {
-            // Invalid input for WE
+            // Invalid input for Vodafone
             return false;
         }
 
