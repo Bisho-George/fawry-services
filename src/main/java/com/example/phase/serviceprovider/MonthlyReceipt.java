@@ -12,15 +12,12 @@ public MonthlyReceipt(String name){
     public boolean handle(Map<String, ?> body) {
         // Assert that mobile number exists
         if (body.get("mobile number") == null) {
-            // Invalid input for WE
             return false;
         }
         if (body.get("zip") == null) {
-            // Invalid input for WE
             return false;
         }
         if (body.get("amount") == null) {
-            // Invalid input for WE
             return false;
         }
         return true;

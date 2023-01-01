@@ -16,13 +16,6 @@ public class WalletPaymentMethod implements PaymentMethod{
         return amount + " Has Payed With Wallet ";
     }
 
-    //public void add(double am){w.addToWallet(am);}
-
-
-
-    //where to add refund transaction function?
-    //how to make discount?
-
 
 
 

@@ -27,7 +27,6 @@ public class AccountController {
 
         return new ResponseEntity<>(acc, HttpStatus.OK);
     }
-    //response entity zi template btraga3 ay no3
 
     @PostMapping("/signup")
     public String signUp(@RequestBody Account account) {

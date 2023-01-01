@@ -25,7 +25,8 @@ public class TransactionDatabase {
         return results;
     }
 
-    public void addRefund(int id,double amount){
+    public void addRefund(double amount){
+        int id = transactions.size();
         transactions.add(new Transaction(id,"Refund",amount));
     }
 
@@ -41,7 +42,8 @@ public class TransactionDatabase {
         return results;
     }
 
-    public void addPayment(int id,double amount){
+    public void addPayment(double amount){
+        int id = transactions.size();
         transactions.add(new Transaction(id,"Payment",amount));
     }
 
@@ -58,7 +60,8 @@ public class TransactionDatabase {
     }
 
 
-    public void addAddition(int id,double amount){
+    public void addAddition(double amount){
+        int id = transactions.size();
         transactions.add(new Transaction(id,"Addition",amount));
     }
 }

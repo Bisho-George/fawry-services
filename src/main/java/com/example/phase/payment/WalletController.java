@@ -21,8 +21,7 @@ public class WalletController {
     @PostMapping("/Add/{amount}")
     public String addToWallet(@PathVariable ("amount") double amount){
         w.addToWallet(amount);
-        int id = tb.getAll().size()+1;
-        tb.addAddition(id,amount);
+        tb.addAddition(amount);
         return amount + " Added Successfully To Your Wallet";
 
 

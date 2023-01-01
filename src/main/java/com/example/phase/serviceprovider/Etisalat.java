@@ -10,11 +10,11 @@ public class Etisalat extends Service{
     public boolean handle(Map<String, ?> body) {
         // Assert that mobile number exists
         if (body.get("mobile number") == null) {
-            // Invalid input for WE
+            // Invalid input for Etisalat
             return false;
         }
         if (body.get("amount") == null) {
-            // Invalid input for WE
+            // Invalid input for Etisalat
             return false;
         }
         return true;
